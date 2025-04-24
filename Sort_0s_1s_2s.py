@@ -22,25 +22,10 @@ def Dutch_national_flag_algo(arr):  # The Dutch National Flag Algorithm is a sor
     
     temp = 0
 
-    for i in range(len(arr)):
-        if arr[i] == 0:
-            temp = arr[low]
-            arr[low] = arr[i]
-            arr[i] = temp
+    while(mid < high):  
+        if(arr[mid] == 0):
+            low += 1
             
-            low = low + 1
-        
-        if arr[i] == 2:
-            if arr[high] == 2:
-                high = high - 1
-            temp = arr[high]
-            arr[high] = arr[i]
-            arr[i] = temp
-
-            high = high - 1
-        print(arr)    
-
-
 
     return arr
 
